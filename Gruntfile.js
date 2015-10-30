@@ -371,7 +371,7 @@ module.exports = function (grunt) {
             },
             pages: {
                 options: {
-                    remote: 'git@github.com:shawnr/dice-site.git',
+                    remote: 'git@github.com:suwebdev/dice-site.git',
                     branch: 'gh-pages'
                 }
             },
