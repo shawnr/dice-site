@@ -343,7 +343,7 @@ module.exports = function (grunt) {
                 '<%= config.dist %>/styles/{,*/}*.css',
                 '!<%= config.dist %>/scripts/vendor/*'
             ],
-            uglify: true
+            uglify: false
         },
 
         // Run some tasks in parallel to speed up build process
