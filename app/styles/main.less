@@ -769,8 +769,11 @@ body {
         .skills-list {
             margin: 1rem 0;
             padding: 2rem 6rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
             background: @brand-yellow-trans;
+            li {
+                margin-bottom: 2rem;
+            }
         }
         .national-stats {
             padding: 1rem 2rem 2rem 2rem;
@@ -789,7 +792,11 @@ body {
             .info-serif {
                 font-family: @font-family-serif;
                 font-weight: 700;
-                font-size: 4rem;
+                font-size: 3.2rem;
+            }
+            .callout-number {
+                font-size: 3.5rem;
+                color: @brand-yellow;
             }
             .big-number {
                 font-size: 10rem;
@@ -801,15 +808,37 @@ body {
                 line-height: 0.4;
                 padding-top: 5rem;
                 display: inline-block;
+                margin-bottom: 4rem;
                 small {
                     font-size: 2rem;
                 }
             }
             .digital-money-icon {
-                font-size: 10rem;
+                font-size: 25rem;
+                color: @brand-green;
             }
             .non-digital-money-icon {
-                font-size: 7.8rem;
+                font-size: 19.5rem;
+                color: @brand-yellow;
+            }
+            .brand-navy {
+                color: @brand-navy;
+            }
+            .info-bar {
+                margin: 3rem 0 5rem 0;
+                padding: 2rem;
+                height: auto;
+                font-size: 3.5rem;
+            }
+            .digital-jobs-bar {
+                background: @brand-green;
+            }
+            .non-digital-jobs-bar {
+                background: @brand-yellow;
+                width: 40%;
+            }
+            .bar-text {
+                font-size: 3rem;
             }
         }
     }
