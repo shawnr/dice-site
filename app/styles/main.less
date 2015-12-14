@@ -779,6 +779,9 @@ body {
             padding: 1rem 2rem 2rem 2rem;
             background: rgba(56, 57, 56, 0.2);
         }
+        .jobs-listing {
+            font-size: 2rem;
+        }
         .digital-skills {
             margin-bottom: 4rem;
             padding: 1rem 2rem 2rem 2rem;
@@ -832,14 +835,26 @@ body {
             }
             .digital-jobs-bar {
                 background: @brand-green;
+                //display: inline-block;
+                width: 100%;
+                min-width: 300px;
             }
             .non-digital-jobs-bar {
                 background: @brand-yellow;
-                width: 40%;
+                //display: inline-block;
+                width: 38%;
+                min-width: 114px;
             }
             .bar-text {
-                font-size: 3rem;
+                font-size: 2rem;
                 white-space: nowrap;
+                @media (max-width: @screen-lg-min){
+                    font-size: 1.5rem;
+                }
+                @media (max-width: @screen-md-min){
+                    font-size: 2rem;
+                    white-space: normal;
+                }
             }
         }
     }
@@ -1268,7 +1283,7 @@ body {
             font-weight: 300;
         }
         .required-equipment {
-            margin-top: 2rem;
+            margin-top: 6rem;
             padding: 1rem;
             background: rgba(56, 57, 56, 0.5);
         }
@@ -1411,7 +1426,7 @@ body {
         }
         h1 {
             font-size: 8rem;
-            color: @brand-red;
+            color: @brand-yellow;
             font-family: @font-family-condensed;
             font-weight: 700;
             text-transform: uppercase;
@@ -1510,9 +1525,9 @@ body {
         background-size: cover;
         text-align: center;
         padding: 0;
-        .make-ribbon(@brand-red, @brand-white);
+        .make-ribbon(@brand-yellow, @brand-red);
         .content {
-            background: @brand-yellow-trans;
+            background: @brand-red-trans;
             padding: 4rem;
             @media (max-width: @screen-sm-min) {
                 letter-spacing: 2px
@@ -1536,8 +1551,8 @@ body {
     }
     .webdev-intro {
         //.at2x('/img/stay_weird_mid.jpg', cover);
-        .at2x('/img/computer_coffee.jpg', cover);
-        background-position: top left;
+        .at2x('/img/hands-coffee2.jpg', cover);
+        background-position: center left;
         background-repeat: no-repeat;
         background-size: cover;
         padding: 6rem 4rem;
@@ -1659,11 +1674,13 @@ body {
         }
     }
     .thrive {
-        .at2x('img/bkgd_tiles/grid_green.png');
+        .at2x('img/bkgd_tiles/grid_emerald.png');
         background-repeat: repeat;
         background-color: @brand-green;
         img {
             border: solid 2px @brand-black;
+            display: inline-block;
+            margin-top: 9rem;
         }
         .content {
             padding: 2rem;
