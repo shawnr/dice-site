@@ -86,6 +86,19 @@ $(document).on('ready', function() {
         setTimeout(function(){$('#request-info').modal('show');}, 5000);
     }
 
+    // Controls for slide-out side-nagger
+    var promoSliderOpen = true;
+    $('.promo-open-toggle').on('click', function(){
+        if (promoSliderOpen){
+            $('#promo-slider').removeClass('open').addClass('closed');
+            promoSliderOpen = false;
+        } else {
+            $('#promo-slider').removeClass('closed').addClass('open');
+            promoSliderOpen = true;
+        }
+
+    });
+
     // R2i tracking pixel
     var okInsertScript = true;
     $('#request-info').on('show.bs.modal', function (event) {

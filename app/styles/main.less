@@ -40,6 +40,92 @@ body {
         .rotate(360deg);
     }
 }
+#promo-slider {
+    position: absolute;
+    top: 30rem;
+    left: 0;
+    margin: 0;
+    padding: 1rem 2rem;
+    z-index: 500;
+    width: 30rem;
+    color: @brand-white;
+    overflow: display;
+    transition: all 0.5s;
+    font-size: 1.8rem;
+    font-weight: 300;
+    h3 {
+        font-family: @font-family-serif;
+        font-size: 3rem;
+    }
+    dt {
+        font-family: @font-family-serif;
+        font-size: 2rem;
+    }
+    &.open {
+        background: @brand-blue;
+        .promo-tag-close {
+            opacity: 1;
+            width: auto;
+            height: auto;
+        }
+        .promo-tag-open {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .promo-content {
+            opacity: 1;
+            width: 25rem;
+            height: auto;
+        }
+    }
+    &.closed {
+        background: @brand-red;
+        width: 10rem;
+        position: fixed;
+        .promo-tag-close {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .promo-tag-open {
+            opacity: 1;
+            width: 6rem;
+            height: auto;
+        }
+
+        .promo-content {
+            opacity: 0;
+            height: 0;
+            width: 0;
+            overflow: hidden;
+        }
+
+    }
+    .promo-content {
+        transition: opacity 1s;
+    }
+    .promo-tag-close {
+        transition: opacity 0.5s;
+        float: right;
+    }
+    .promo-tag-open {
+        font-size: 2rem;
+        width: 6rem;
+        transition: opacity 0.5s;
+        .promo-open-toggle {
+            cursor: pointer;
+            color: @brand-white !important;
+            font-weight: 700;
+
+        }
+        .promo-open-toggle:hover {
+            text-decoration: none;
+        }
+    }
+}
 .btn-request-info {
     position: fixed;
     bottom: 0;
