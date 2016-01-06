@@ -88,12 +88,16 @@ $(document).on('ready', function() {
 
     // Controls for slide-out side-nagger
     var promoSliderOpen = true;
+    var promoSliderEl = $('#promo-slider');
+    promoSliderEl.css('top', $('body').scrollTop()+250+'px');
     $('.promo-open-toggle').on('click', function(){
+
         if (promoSliderOpen){
-            $('#promo-slider').removeClass('open').addClass('closed');
+            promoSliderEl.removeClass('open').addClass('closed').css('top', '30rem');
             promoSliderOpen = false;
         } else {
-            $('#promo-slider').removeClass('closed').addClass('open');
+            var promoSliderOffset = promoSliderEl.offset();
+            promoSliderEl.removeClass('closed').addClass('open').css('top', promoSliderOffset.top);
             promoSliderOpen = true;
         }
 
