@@ -349,16 +349,16 @@
             $(document).on('ready', function() {
                 // Mixpanel events
                 $('.btn-apply').on('click', function () {
-                    mixpanel.track('Apply Button Clicked');
+                    mixpanel.track('DICE Apply Button Clicked');
                 });
                 $('.btn-request-info').on('click', function () {
-                    mixpanel.track('Request Info Opened');
+                    mixpanel.track('DICE Request Info Opened');
                 });
                 $('.request-info-modal .close').on('click', function () {
-                    mixpanel.track('Request Info Closed');
+                    mixpanel.track('DICE Request Info Closed');
                 });
                 mixpanel.track("Page View", {
-                    'title': 'Cost'
+                    'title': 'DICE Cost'
                 });
             });
         }
