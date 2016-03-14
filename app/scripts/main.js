@@ -87,21 +87,24 @@ $(document).on('ready', function() {
     }
 
     // Controls for slide-out side-nagger
-    var promoSliderOpen = true;
-    var promoSliderEl = $('#promo-slider');
-    promoSliderEl.css('top', $('body').scrollTop()+250+'px');
-    $('.promo-open-toggle').on('click', function(){
+    var showPromoSlider = false; // set to `true` to show the promo slider nag
+    if (showPromoSlider){
+        var promoSliderOpen = true;
+        var promoSliderEl = $('#promo-slider');
+        promoSliderEl.css('top', $('body').scrollTop()+250+'px');
+        $('.promo-open-toggle').on('click', function(){
 
-        if (promoSliderOpen){
-            promoSliderEl.removeClass('open').addClass('closed').css('top', '30rem');
-            promoSliderOpen = false;
-        } else {
-            var promoSliderOffset = promoSliderEl.offset();
-            promoSliderEl.removeClass('closed').addClass('open').css('top', promoSliderOffset.top);
-            promoSliderOpen = true;
-        }
+            if (promoSliderOpen){
+                promoSliderEl.removeClass('open').addClass('closed').css('top', '30rem');
+                promoSliderOpen = false;
+            } else {
+                var promoSliderOffset = promoSliderEl.offset();
+                promoSliderEl.removeClass('closed').addClass('open').css('top', promoSliderOffset.top);
+                promoSliderOpen = true;
+            }
 
-    });
+        });
+    }
 
     // R2i tracking pixel
     var okInsertScript = true;
