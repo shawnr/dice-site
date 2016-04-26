@@ -1712,6 +1712,16 @@ body {
         h2 {
             color: @brand-yellow;
         }
+        iframe {
+            margin-top: 3rem;
+        }
+        @media (max-width: @screen-md-min) {
+            iframe {
+                width: 100%;
+                height: auto;
+                min-height: 300px !important;
+            }
+        }
         .content {
             padding: 4rem;
             img {
