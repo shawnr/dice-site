@@ -87,7 +87,7 @@ $(document).on('ready', function() {
     }
 
     // Controls for slide-out side-nagger
-    var showPromoSlider = false; // set to `true` to show the promo slider nag
+    var showPromoSlider = true; // set to `true` to show the promo slider nag
     if (showPromoSlider){
         var promoSliderOpen = true;
         var promoSliderEl = $('#promo-slider');
